@@ -6,6 +6,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/EUREKA/pom.xml" />
         <option value="$PROJECT_DIR$/MSA-HUB/pom.xml" />
+        <option value="$PROJECT_DIR$/MSA-GATEWAY/pom.xml" />
       </list>
     </option>
   </component>
