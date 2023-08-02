@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/EUREKA/eureka.iml" filepath="$PROJECT_DIR$/EUREKA/eureka.iml" />
       <module fileurl="file://$PROJECT_DIR$/MSA-GATEWAY/gateway.iml" filepath="$PROJECT_DIR$/MSA-GATEWAY/gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/MSA-HUB/hub.iml" filepath="$PROJECT_DIR$/MSA-HUB/hub.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MSA-UI/ui.iml" filepath="$PROJECT_DIR$/MSA-UI/ui.iml" />
     </modules>
   </component>
 </project>
