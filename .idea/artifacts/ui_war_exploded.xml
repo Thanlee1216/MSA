@@ -14,6 +14,11 @@
           <element id="module-output" name="ui" />
         </element>
         <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-jasper:9.0.41" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-core:9.0.41" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat:tomcat-annotations-api:9.0.41" />
+          <element id="library" level="project" name="Maven: org.apache.tomcat.embed:tomcat-embed-el:9.0.41" />
+          <element id="library" level="project" name="Maven: org.eclipse.jdt:ecj:3.18.0" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-web:2.4.2" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-json:2.4.2" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.11.4" />

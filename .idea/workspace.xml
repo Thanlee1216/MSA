@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8307ddeb-27fd-4d76-a23a-ef1678593424" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ui_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/ui_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MSA-UI/app-local.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_41.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_jasper_9_0_41.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_tomcat_annotations_api_9_0_41.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jdt_ecj_3_18_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MSA-UI/src/main/java/com/msa/ui/UIController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MSA-UI/src/main/webapp/WEB-INF/jsp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ui_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/ui_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MSA-HUB/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MSA-HUB/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSA-UI/app-local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/MSA-UI/app-local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MSA-UI/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MSA-UI/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +22,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="jsf" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -165,7 +167,7 @@
       <option name="presentableId" value="Default" />
       <updated>1690810908798</updated>
       <workItem from="1690810911563" duration="1400000" />
-      <workItem from="1690812331459" duration="4042000" />
+      <workItem from="1690812331459" duration="4450000" />
     </task>
     <task id="LOCAL-00001" summary="eureka init">
       <created>1690812717138</created>
@@ -181,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690894902873</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="UI project init">
+      <created>1690986013386</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1690986013386</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +199,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="eureka init" />
     <MESSAGE value="API-Gateway init" />
-    <option name="LAST_COMMIT_MESSAGE" value="API-Gateway init" />
+    <MESSAGE value="UI project init" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI project init" />
   </component>
   <component name="WindowStateProjectService">
     <state x="415" y="6" width="719" height="812" key="#EurekaApplication" timestamp="1690893322859">
@@ -205,10 +215,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="415" y="0" width="719" height="824" key="#UiApplication/0.0.1536.824@0.0.1536.824" timestamp="1690985930776" />
-    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1690894902081">
+    <state x="292" y="0" key="CommitChangelistDialog2" timestamp="1690986012583">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1690894902081" />
+    <state x="292" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1690986012583" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1690985929050">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -225,62 +235,62 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="593" y="116" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1690810932974" />
-    <state width="1024" height="325" key="GridCell.Tab.0.bottom" timestamp="1690985924060">
+    <state width="1024" height="325" key="GridCell.Tab.0.bottom" timestamp="1690985975640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="325" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1690985924060" />
-    <state width="1024" height="325" key="GridCell.Tab.0.center" timestamp="1690985924060">
+    <state width="1024" height="325" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1690985975640" />
+    <state width="1024" height="325" key="GridCell.Tab.0.center" timestamp="1690985975640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="325" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1690985924060" />
-    <state width="1024" height="325" key="GridCell.Tab.0.left" timestamp="1690985924060">
+    <state width="1024" height="325" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1690985975640" />
+    <state width="1024" height="325" key="GridCell.Tab.0.left" timestamp="1690985975640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="325" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1690985924060" />
-    <state width="1024" height="325" key="GridCell.Tab.0.right" timestamp="1690985924060">
+    <state width="1024" height="325" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1690985975640" />
+    <state width="1024" height="325" key="GridCell.Tab.0.right" timestamp="1690985975640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="325" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1690985924060" />
-    <state width="1024" height="325" key="GridCell.Tab.1.bottom" timestamp="1690985924060">
+    <state width="1024" height="325" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1690985975640" />
+    <state width="1024" height="325" key="GridCell.Tab.1.bottom" timestamp="1690985975640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="325" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1690985924060" />
-    <state width="1024" height="325" key="GridCell.Tab.1.center" timestamp="1690985924060">
+    <state width="1024" height="325" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1690985975640" />
+    <state width="1024" height="325" key="GridCell.Tab.1.center" timestamp="1690985975640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="325" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1690985924060" />
-    <state width="1024" height="325" key="GridCell.Tab.1.left" timestamp="1690985924060">
+    <state width="1024" height="325" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1690985975640" />
+    <state width="1024" height="325" key="GridCell.Tab.1.left" timestamp="1690985975640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="325" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1690985924060" />
-    <state width="1024" height="325" key="GridCell.Tab.1.right" timestamp="1690985924060">
+    <state width="1024" height="325" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1690985975640" />
+    <state width="1024" height="325" key="GridCell.Tab.1.right" timestamp="1690985975640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="325" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1690985924060" />
-    <state width="1024" height="325" key="GridCell.Tab.2.bottom" timestamp="1690985924060">
+    <state width="1024" height="325" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1690985975640" />
+    <state width="1024" height="325" key="GridCell.Tab.2.bottom" timestamp="1690985975640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="325" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1690985924060" />
-    <state width="1024" height="325" key="GridCell.Tab.2.center" timestamp="1690985924060">
+    <state width="1024" height="325" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1690985975640" />
+    <state width="1024" height="325" key="GridCell.Tab.2.center" timestamp="1690985975640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="325" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1690985924060" />
-    <state width="1024" height="325" key="GridCell.Tab.2.left" timestamp="1690985924060">
+    <state width="1024" height="325" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1690985975640" />
+    <state width="1024" height="325" key="GridCell.Tab.2.left" timestamp="1690985975640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="325" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1690985924060" />
-    <state width="1024" height="325" key="GridCell.Tab.2.right" timestamp="1690985924060">
+    <state width="1024" height="325" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1690985975640" />
+    <state width="1024" height="325" key="GridCell.Tab.2.right" timestamp="1690985975640">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1024" height="325" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1690985924060" />
+    <state width="1024" height="325" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1690985975640" />
     <state x="429" y="115" key="NewModule_or_Project.wizard" timestamp="1690985792915">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="429" y="115" key="NewModule_or_Project.wizard/0.0.1536.824@0.0.1536.824" timestamp="1690985792915" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1690812743191">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1690986028282">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1690812743191" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1690986028282" />
     <state x="474" y="144" width="587" height="536" key="find.popup" timestamp="1690893800195">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
