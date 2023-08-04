@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/MSA-GATEWAY/gateway.iml" filepath="$PROJECT_DIR$/MSA-GATEWAY/gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/MSA-HUB/hub.iml" filepath="$PROJECT_DIR$/MSA-HUB/hub.iml" />
       <module fileurl="file://$PROJECT_DIR$/MSA-UI/ui.iml" filepath="$PROJECT_DIR$/MSA-UI/ui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MSA-UTIL/util.iml" filepath="$PROJECT_DIR$/MSA-UTIL/util.iml" />
     </modules>
   </component>
 </project>

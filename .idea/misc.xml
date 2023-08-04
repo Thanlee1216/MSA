@@ -11,6 +11,7 @@
         <option value="$PROJECT_DIR$/MSA-HUB/pom.xml" />
         <option value="$PROJECT_DIR$/MSA-GATEWAY/pom.xml" />
         <option value="$PROJECT_DIR$/MSA-UI/pom.xml" />
+        <option value="$PROJECT_DIR$/MSA-UTIL/pom.xml" />
       </list>
     </option>
   </component>
