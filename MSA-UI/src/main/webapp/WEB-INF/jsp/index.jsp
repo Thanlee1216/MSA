@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-<h1>이태한의 페이지</h1>
+<h1>구얼이를 반으로 나누는 페이지</h1>
 </body>
 </html>
