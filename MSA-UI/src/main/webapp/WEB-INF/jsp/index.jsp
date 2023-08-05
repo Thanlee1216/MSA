@@ -11,6 +11,6 @@
     <title>Title</title>
 </head>
 <body>
-<h1>Hello world</h1>
+<h1>이태한의 페이지</h1>
 </body>
 </html>
