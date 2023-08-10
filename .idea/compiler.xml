@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="util" />
+        <module name="login" />
         <module name="gateway" />
         <module name="ui" />
         <module name="eureka" />
@@ -16,6 +17,7 @@
       <module name="eureka" target="1.8" />
       <module name="gateway" target="1.8" />
       <module name="hub" target="1.8" />
+      <module name="login" target="1.8" />
       <module name="MSA" target="1.5" />
       <module name="ui" target="1.8" />
       <module name="util" target="1.8" />
@@ -25,6 +27,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="eureka" options="-parameters" />
       <module name="gateway" options="-parameters" />
+      <module name="login" options="-parameters" />
       <module name="ui" options="-parameters" />
       <module name="util" options="-parameters" />
     </option>

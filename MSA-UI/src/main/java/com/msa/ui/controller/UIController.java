@@ -1,4 +1,4 @@
-package com.msa.ui;
+package com.msa.ui.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
