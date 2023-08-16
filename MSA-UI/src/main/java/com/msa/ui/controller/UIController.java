@@ -34,4 +34,10 @@ public class UIController {
         logger.debug("request : resume");
         return "resume";
     }
+
+    @RequestMapping(value = "/resume", method = {RequestMethod.GET, RequestMethod.POST})
+    public String test() {
+        logger.debug("request : resume");
+        return "resume";
+    }
 }
