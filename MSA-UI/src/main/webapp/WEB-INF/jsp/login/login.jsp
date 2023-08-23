@@ -11,6 +11,31 @@
     <title>Title</title>
 </head>
 <body>
+<div>
+    id : <input type="text" id="email">
+</div>
+<div>
+    pw : <input type="password" id="password">
+</div>
+<div>
+    <input type="button" onclick="fnLogin()">
+</div>
 
 </body>
 </html>
+<script>
+    function fnLogin() {
+        let param = {
+            "email" : $("#email").val()
+            , "password" : $("#password").val()
+        }
+        commAjax.request(
+            "/LOGINAPI/loginAct"
+            , "POST"
+            , param
+            , function(data) {
+                location.href="/index"
+            }
+        )
+    }
+</script>
