@@ -13,7 +13,7 @@
 <script src="js/jquery/jquery-validate/additional-methods.js"></script>
 <script src="js/jquery/jquery-validate/localization/messages_ko.js"></script>
 <script src="js/common.js"></script>
-<link rel="stylesheet" href="assets/css/login.css"/>
+<link rel="stylesheet" href="css/login.css"/>
 
 <head>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
