@@ -61,7 +61,7 @@
         <module>../MSA-GATEWAY</module>
         <module>../MSA-UTIL</module>
         <module>../MSA-UI</module>
-        <module>../MSA-LOGIN</module>
+        <module>../MSA-USER</module>
     </modules>
 
     <build>

@@ -1,8 +1,8 @@
-package com.msa.login.Controller;
+package com.msa.user.Controller;
 
-import com.msa.login.Service.USERApiService;
-import com.msa.login.model.USERApiVO;
-import com.msa.login.util.Base64Util;
+import com.msa.user.Service.USERApiService;
+import com.msa.user.model.USERApiVO;
+import com.msa.user.util.Base64Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

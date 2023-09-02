@@ -1,6 +1,6 @@
-package com.msa.login.repository;
+package com.msa.user.repository;
 
-import com.msa.login.model.USERApiVO;
+import com.msa.user.model.USERApiVO;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;

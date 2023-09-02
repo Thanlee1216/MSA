@@ -1,10 +1,10 @@
-package com.msa.login;
+package com.msa.user;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LoginApplicationTests {
+class UserApplicationTests {
 
     @Test
     void contextLoads() {

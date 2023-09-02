@@ -1,4 +1,4 @@
-package com.msa.login.util;
+package com.msa.user.util;
 
 import org.springframework.stereotype.Component;
 

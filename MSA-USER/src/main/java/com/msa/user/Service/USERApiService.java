@@ -1,7 +1,7 @@
-package com.msa.login.Service;
+package com.msa.user.Service;
 
-import com.msa.login.model.USERApiVO;
-import com.msa.login.repository.USERApiRepository;
+import com.msa.user.model.USERApiVO;
+import com.msa.user.repository.USERApiRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

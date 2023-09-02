@@ -9,10 +9,8 @@
         <relativePath>../MSA-HUB/pom.xml</relativePath> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.msa</groupId>
-    <artifactId>login</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>login</name>
-    <description>Demo project for Spring Boot</description>
+    <artifactId>MSA-USER</artifactId>
+    <name>MSA-USER</name>
     <properties>
         <java.version>1.8</java.version>
     </properties>

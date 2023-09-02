@@ -1,4 +1,4 @@
-package com.msa.login.model;
+package com.msa.user.model;
 
 import lombok.Data;
 
