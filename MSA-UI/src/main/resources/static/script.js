@@ -1,96 +1,40 @@
-$(document).ready(function () {
-    generateMoveBlocks();
-});
+const draggables = document.querySelectorAll('.draggable')
+const contents = document.querySelectorAll('.content')
 
-let draggedElement = null;
+draggables.forEach(draggable => {
+    draggable.addEventListener('dragstart', () => {
+        draggable.classList.add('dragging')
+    })
 
-function generateMoveBlocks() {
-    const content = $('#content');
+    draggable.addEventListener('dragend', () => {
+        draggable.classList.remove('dragging')
+    })
+})
 
-    for (let i = 1; i <= 3; i++) {
-        const column = $('<div class="column"></div>');
-
-        for (let j = 1; j <= 4; j++) {
-            const moveBlock = $('<div class="move-block"></div>')
-                .text(`Block ${i}-${j}`)
-                .attr('draggable', true)
-                .on('dragstart', dragStart);
-
-            column.append(moveBlock);
+contents.forEach(content => {
+    content.addEventListener('dragover', e => {
+        e.preventDefault()
+        const afterElement = getDragAfterElement(content, e.clientY)
+        console.log(afterElement);
+        const draggable = document.querySelector('.dragging')
+        if (afterElement == null) {
+            content.appendChild(draggable)
+        } else {
+            content.insertBefore(draggable, afterElement)
         }
+    })
+})
 
-        content.append(column);
-    }
-}
+function getDragAfterElement(content, y) {
+    const draggableElements = [...content.querySelectorAll('.draggable:not(.dragging)')]
 
-function dragStart(event) {
-    draggedElement = $(event.target);
-    event.originalEvent.dataTransfer.effectAllowed = 'move';
-    event.originalEvent.dataTransfer.setData('text/plain', draggedElement.text());
-}
-
-$(document).on('dragover', function (event) {
-    event.preventDefault();
-
-    if (draggedElement) {
-        const rect = draggedElement[0].getBoundingClientRect();
-        draggedElement.css({
-            position: 'fixed',
-            top: `${event.originalEvent.clientY - rect.height / 2}px`,
-            left: `${event.originalEvent.clientX - rect.width / 2}px`
-        });
-
-        const columns = $('.column');
-        const closestBlock = getClosestBlock(event.originalEvent.clientX, event.originalEvent.clientY, columns);
-
-        if (closestBlock) {
-            const rectClosest = closestBlock[0].getBoundingClientRect();
-            const isDraggedAbove = event.originalEvent.clientY < rectClosest.top + rectClosest.height / 2;
-
-            if (isDraggedAbove) {
-                closestBlock.prepend(draggedElement);
-            } else {
-                closestBlock.append(draggedElement);
-            }
+    return draggableElements.reduce((closest, child) => {
+        const box = child.getBoundingClientRect()
+        const offset = y - box.top - box.height / 2
+        if (offset < 0 && offset > closest.offset) {
+            return { offset: offset, element: child }
+        } else {
+            return closest
         }
-    }
-});
-
-$(document).on('dragend', function () {
-    if (draggedElement) {
-        draggedElement.css('position', 'static');
-        draggedElement = null;
-    }
-});
-
-$(document).on('drop', function (event) {
-    event.preventDefault();
-    if (draggedElement) {
-        draggedElement.css('position', 'static');
-        const target = $(event.target);
-
-        if (target.hasClass('move-block')) {
-            const draggedText = event.originalEvent.dataTransfer.getData('text/plain');
-            target.text(draggedText);
-            draggedElement.text('');
-        } else if (target.hasClass('column')) {
-            const newBlock = draggedElement.clone();
-            newBlock.attr('draggable', true).on('dragstart', dragStart);
-            target.append(newBlock);
-        }
-
-        draggedElement = null;
-    }
-});
-
-function getClosestBlock(x, y, blocks) {
-    const distances = blocks.map(function (block) {
-        const rect = block.getBoundingClientRect();
-        const dx = x - (rect.left + rect.width / 2);
-        const dy = y - (rect.top + rect.height / 2);
-        return Math.hypot(dx, dy);
-    });
-
-    const closestIndex = distances.indexOf(Math.min(...distances));
-    return blocks.eq(closestIndex);
+    }, { offset: Number.NEGATIVE_INFINITY }).element
 }
