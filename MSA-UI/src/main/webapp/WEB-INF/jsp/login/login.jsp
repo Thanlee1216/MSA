@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<spring:eval expression="@environment.getProperty('LOGIN.URL')" var="LOGIN_URL"/>
+<spring:eval expression="@environment.getProperty('USER.URL')" var="USER_URL"/>
 <script src="js/jquery/jquery.js"></script>
 <script src="js/jquery/jquery-validate/jquery.validate.js"></script>
 <script src="js/jquery/jquery-validate/additional-methods.js"></script>
@@ -87,7 +87,7 @@
     <%--        , "password": $("#password").val()--%>
     <%--    }--%>
     <%--    commAjax.request(--%>
-    <%--        "${LOGIN_URL}/LOGINAPI/loginAct"--%>
+    <%--        "${LOGIN_URL}/USERAPI/loginAct"--%>
     <%--        , "POST"--%>
     <%--        , param--%>
     <%--        , function (data) {--%>
@@ -125,7 +125,7 @@
                 , "password": $("#password").val()
             }
             commAjax.request(
-                "${LOGIN_URL}/LOGINAPI/loginAct"
+                "${USER_URL}/USERAPI/loginAct"
                 , "POST"
                 , param
                 , function (data) {
@@ -159,7 +159,7 @@
     <%--    }--%>
     <%--    // let param = $("#signUpFrom").serialize();--%>
     <%--    commAjax.request(--%>
-    <%--        "${LOGIN_URL}/LOGINAPI/signUp"--%>
+    <%--        "${LOGIN_URL}/USERAPI/signUp"--%>
     <%--        , "POST"--%>
     <%--        , param--%>
     <%--        , function (data) {--%>
@@ -193,13 +193,14 @@
             }
             // let param = $("#signUpFrom").serialize();
             commAjax.request(
-                "${LOGIN_URL}/LOGINAPI/signUp"
+                "${USER_URL}/USERAPI/signUp"
                 , "POST"
                 , param
                 , function (data) {
                     if (data.result == 'false') {
                         alert("회원가입 실패");
                     } else {
+                        alert("회원가입 성공");
                         location.href = "/login";
                     }
                 }

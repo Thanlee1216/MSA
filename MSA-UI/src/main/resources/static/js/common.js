@@ -17,7 +17,6 @@ let commAjax = {
                 // $('#load-spinner').removeClass("d-none").addClass("d-block");
             },
             success: function (response, statusText, data) {
-                ING(false);
                 callback(data.responseJSON);
             },
             error: function (request, status, error, data) {

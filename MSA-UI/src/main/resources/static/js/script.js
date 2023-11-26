@@ -1,6 +1,60 @@
 const draggables = document.querySelectorAll('.draggable')
 const contents = document.querySelectorAll('.content')
 
+const baseUrl = 'https://jsonplaceholder.typicode.com/';
+const menuNames = [
+    'posts',
+    'comments',
+    'albums',
+    'photos',
+    'todos',
+    'users'
+];
+
+$(function() {
+    //$('div.menu').hide();
+
+    // open menu
+    $('i.fa-bars').click(function() {
+        $('div.btn-top').hide();
+
+        $('div.menu').toggle('slide', {
+            direction: 'left'
+        }, 400);
+    });
+
+    // close menu
+    $('i.fa-xmark').click(function() {
+        $('div.menu').toggle('slide', {
+            direction: 'left'
+        }, 400, function() {
+            $('div.btn-top').fadeIn();
+        });
+    });
+
+    // click menu
+    $(document).on('click', 'li', function() {
+        const name = $(this).text();
+        $.blockUI();
+
+        $('div.menu').toggle('slide', {
+            direction: 'left'
+        }, 400, function() {
+            $('div.btn-top').fadeIn();
+        });
+    });
+
+    setMenu();
+});
+
+function setMenu() {
+    let sMenuHtml = '';
+    for (const menu of menuNames) {
+        sMenuHtml += `<li>${menu}</li>`;
+    }
+    $('div.menu ul').html(sMenuHtml);
+}
+
 draggables.forEach(draggable => {
     draggable.addEventListener('dragstart', () => {
         draggable.classList.add('dragging')

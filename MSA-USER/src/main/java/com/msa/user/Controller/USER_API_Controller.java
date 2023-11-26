@@ -1,6 +1,7 @@
 package com.msa.user.Controller;
 
 import com.msa.user.Service.USERApiService;
+import com.msa.user.model.SCHEDULE_VO;
 import com.msa.user.model.USERApiVO;
 import com.msa.user.util.Base64Util;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping(value = "/LOGINAPI")
+@RequestMapping(value = "/USERAPI")
 public class USER_API_Controller {
 
     @Autowired
@@ -39,7 +40,7 @@ public class USER_API_Controller {
         String password = base64Util.sha256(param.get("password"));
 
         if(service.loginCheck(email, password)) {
-            resultMap.put("result", "true");
+            resultMap.put("result", email);
         }else {
             resultMap.put("result", "false");
         }
@@ -55,6 +56,34 @@ public class USER_API_Controller {
         vo.setPwd(base64Util.sha256(vo.getPwd()));
 
         if(service.INSERT(vo)) {
+            resultMap.put("result", "true");
+        }else {
+            resultMap.put("result", "false");
+        }
+
+        return new ResponseEntity<>(resultMap, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/savecontent", method = {RequestMethod.GET, RequestMethod.POST})
+    public ResponseEntity<Map<String, String>> saveContent(HttpServletRequest request, @RequestBody SCHEDULE_VO vo) throws Exception{
+
+        Map<String, String> resultMap = new HashMap<>();
+
+        if(service.savemodal(vo)) {
+            resultMap.put("result", "true");
+        }else {
+            resultMap.put("result", "false");
+        }
+
+        return new ResponseEntity<>(resultMap, HttpStatus.OK);
+    }
+
+    @RequestMapping(value = "/savemodal", method = {RequestMethod.GET, RequestMethod.POST})
+    public ResponseEntity<Map<String, String>> saveModal(HttpServletRequest request, @RequestBody SCHEDULE_VO vo) throws Exception{
+
+        Map<String, String> resultMap = new HashMap<>();
+
+        if(service.savemodal(vo)) {
             resultMap.put("result", "true");
         }else {
             resultMap.put("result", "false");

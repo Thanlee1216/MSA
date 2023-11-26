@@ -1,23 +1,19 @@
 package com.msa.user.repository;
 
+import com.msa.user.model.SCHEDULE_VO;
 import com.msa.user.model.USERApiVO;
 import org.springframework.stereotype.Repository;
 
-import java.util.HashMap;
 import java.util.Map;
 
 @Repository
-public class USERApiRepository {
+public interface USERApiRepository {
 
-    public Map<String, Long> loginCheck(String email, String password) {
-        return new HashMap<>();
-    }
+    Map<String, String> TEST();
+    
+    int INSERT(USERApiVO vo);
 
-    public int INSERT(USERApiVO vo) {
-        return 1;
-    }
-
-    public Map<String, String> TEST() {
-        return new HashMap<>();
-    }
+    Map<String, Long> loginCheck(String email, String password);
+    int INSERT_SCHEDULE(SCHEDULE_VO vo);
+    Map<String, Long> getSCHEDULE_NO(SCHEDULE_VO vo);
 }

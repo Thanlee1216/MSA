@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.msa.user.repository.USERApiRepository">
+
+
+    <select id="TEST" parameterType="hashmap" resultType="hashmap">
+        SELECT 'test' AS TEXT from DUAL
+    </select>
+
+    <select id="loginCheck" parameterType="String" resultType="hashmap">
+        SELECT COUNT(*) AS CNT_USER
+        FROM myDB.USER_INFO M
+        WHERE M.USER_ID = #{email}
+        AND M.PWD = #{password}
+    </select>
+
+    <insert id="INSERT" parameterType="USERApiVO">
+        INSERT INTO myDB.USER_INFO(
+            USER_ID
+            ,   PWD
+            ,   NAME
+        ) VALUES (
+            #{user_id}
+            ,   #{pwd}
+            ,   #{name}
+        )
+    </insert>
+
+    <select id="INSERT" parameterType="hashmap">
+        INSERT INTO myDB.USER_INFO(
+            USER_ID
+            ,   PWD
+            ,   NAME
+        ) VALUES (
+            #{user_id}
+            ,   #{pwd}
+            ,   #{name}
+        )
+    </select>
+
+    <insert id="getSCHEDULE_NO" parameterType="SCHEDULE">
+        SELECT IFNULL(MAX(SCHEDULE_NO), 0) + 1 AS SCHEDULE_NO
+        FROM myDB.USER_SCHEDULE
+        WHERE USER_ID = #{USER_ID}
+        AND WORKSPACE_NO = #{WORKSPACE_NO}
+    </insert>
+</mapper>
