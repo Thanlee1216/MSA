@@ -29,15 +29,29 @@
         )
     </insert>
 
-    <select id="INSERT" parameterType="hashmap">
-        INSERT INTO myDB.USER_INFO(
-            USER_ID
-            ,   PWD
-            ,   NAME
+    <select id="INSERT_SCHEDULE" parameterType="SCHEDULE">
+        INSERT INTO myDB.USER_SCHEDULE(
+            WORKSPACE_NO
+            , USER_ID
+            , SCHEDULE_NO
+            , STATAS
+            , SEQ
+            , TITLE
+            , WRITER
+            , MANAGER
+            , DETAIL
+            , DEL_YN
         ) VALUES (
-            #{user_id}
-            ,   #{pwd}
-            ,   #{name}
+            #{WORKSPACE_NO}
+            , #{USER_ID}
+            , #{SCHEDULE_NO}
+            , #{STATAS}
+            , #{SEQ}
+            , #{TITLE}
+            , #{WRITER}
+            , #{MANAGER}
+            , #{DETAIL}
+            , #{DEL_YN}
         )
     </select>
 

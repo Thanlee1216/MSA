@@ -50,18 +50,17 @@
             , "DETAIL": $("#detail").val()
             , "USER_ID": '<%=session.getAttribute("sessionInfo")%>'
         }
-        console.log("");
-        <%--commAjax.request(--%>
-        <%--    "${USER_URL}/USERAPI/savemodal"--%>
-        <%--    , "POST"--%>
-        <%--    , param--%>
-        <%--    , function (data) {--%>
-        <%--        if (data.result == 'false') {--%>
-        <%--            alert("회원가입 실패");--%>
-        <%--        } else {--%>
-        <%--            location.href = "/login";--%>
-        <%--        }--%>
-        <%--    }--%>
-        <%--)--%>
+        commAjax.request(
+            "${USER_URL}/USERAPI/savemodal"
+            , "POST"
+            , param
+            , function (data) {
+                if (data.result == 'false') {
+                    alert("회원가입 실패");
+                } else {
+                    location.href = "/login";
+                }
+            }
+        )
     }
 </script>
